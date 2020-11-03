@@ -9,8 +9,8 @@ variables:
 
 steps:
 - script: |
-    echo $(System.DefaultWorkingDirectory)
-    if exist $(System.DefaultWorkingDirectory)\config.json echo "found"
+    npm install pnpm@5.10.4
+    pnpm install --frozen-lockfile
 
 
 - task: FileTransform@2
