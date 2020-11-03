@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  ToBeReplaced: replacement
+
 steps:
 - task: FileTransform@1
   inputs:
