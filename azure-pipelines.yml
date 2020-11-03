@@ -10,7 +10,7 @@ variables:
 steps:
 - script: |
     echo $(System.DefaultWorkingDirectory)
-    if exists $(System.DefaultWorkingDirectory)/config.json echo "found"
+    if exists $(System.DefaultWorkingDirectory)\config.json echo "found"
 
 
 - task: FileTransform@1
