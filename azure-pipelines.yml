@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: FileTransform@1
+  inputs:
+    folderPath: $(System.DefaultWorkingDirectory)
+    targetFiles: config.json
+  displayName: 'Show failing FileTransform'
