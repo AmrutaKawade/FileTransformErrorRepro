@@ -13,8 +13,8 @@ steps:
     if exist $(System.DefaultWorkingDirectory)\config.json echo "found"
 
 
-- task: FileTransform@1
+- task: FileTransform@2
   inputs:
     folderPath: $(System.DefaultWorkingDirectory)
-    targetFiles: config.json
+    jsonTargetFiles: config.json
   displayName: 'Show failing FileTransform'
