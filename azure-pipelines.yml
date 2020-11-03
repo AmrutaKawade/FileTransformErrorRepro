@@ -8,13 +8,14 @@ variables:
   ToBeReplaced: replacement
 
 steps:
-- script: |
-    npm install pnpm@5.10.4
-    pnpm install --frozen-lockfile
+- script: npm i -g pnpm@5.10.4
+  displayName: Install pnpm
 
+- script: pnpm i --frozen-lockfile
+  displayName: Install deps
 
 - task: FileTransform@2
   inputs:
     folderPath: $(System.DefaultWorkingDirectory)
     jsonTargetFiles: config.json
-  displayName: 'Show failing FileTransform'
+  displayName: Show failing FileTransform
